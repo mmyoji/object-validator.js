@@ -15,7 +15,7 @@ type TargetObject = {
   name: string;
   age: number;
   isAdmin?: boolean;
-}
+};
 
 const validate = init<TargetObject>({
   name: {
@@ -38,7 +38,7 @@ const errors = validate({
   name: "a",
   count: 22,
   isAdmin: true,
-})
+});
 console.log(errors);
 //=> [{key:"name",message:"name is too short. It must be 3 length at least."}]
 ```
