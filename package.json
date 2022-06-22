@@ -1,13 +1,22 @@
 {
-  "name": "object-validator",
-  "private": true,
+  "name": "@mmyoji/object-validator",
   "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/object-validator.umd.js",
+  "module": "./dist/object-validator.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/object-validator.es.js",
+      "require": "./dist/object-validator.umd.js"
+    }
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build"
   },
   "devDependencies": {
+    "@types/node": "^16.11.41",
     "typescript": "^4.5.4",
     "vite": "^2.9.9"
   }
