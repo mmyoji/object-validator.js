@@ -16,7 +16,7 @@
     "skipLibCheck": true,
     "exactOptionalPropertyTypes": true,
     "outDir": "dist",
-    "declaration": true,
+    "declaration": true
   },
   "include": ["lib"]
 }
