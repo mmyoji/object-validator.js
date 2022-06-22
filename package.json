@@ -32,7 +32,8 @@
     "build": "vite build",
     "test": "vitest --run",
     "test:watch": "vitest",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check ."
   },
   "devDependencies": {
     "@types/node": "^16.11.41",
