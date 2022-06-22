@@ -25,18 +25,20 @@ interface BooleanSchema {
 
 type SchemaInfo = StringSchema | NumberSchema | BooleanSchema;
 
-interface Schema {
+export interface Schema {
   [key: string | symbol]: SchemaInfo;
 }
 
-interface ValidationError {
+export interface ValidationError {
   key: string;
   message: string;
 }
 
-type ValidatorFunc<Args extends object> = (obj: Args) => ValidationError[];
+export type ValidatorFunc<Args extends object> = (
+  obj: Args
+) => ValidationError[];
 
-type InternalValidatorFunc = (args: {
+export type InternalValidatorFunc = (args: {
   key: string;
   target: unknown;
   schemaInfo: SchemaInfo;

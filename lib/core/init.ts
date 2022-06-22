@@ -1,3 +1,5 @@
+import type { Schema, ValidatorFunc, ValidationError } from "../lib-env";
+
 import { isObject } from "../helpers/is-object";
 import { booleanValidator } from "./boolean.validator";
 import { stringValidator } from "./string.validator";

@@ -1,3 +1,5 @@
+import type { InternalValidatorFunc, ValidationError } from "lib/lib-env";
+
 const validate: InternalValidatorFunc = ({ key, schemaInfo, target }) => {
   if (schemaInfo.type !== "string") {
     throw new Error("schemaInfo.type must be string here.");
