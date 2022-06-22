@@ -11,7 +11,7 @@ $ npm install @mmyoji/object-validator
 ```ts
 import { init } from "@mmyoji/object-validator";
 
-type TargetObject {
+type TargetObject = {
   name: string;
   isAdmin?: boolean;
 }
