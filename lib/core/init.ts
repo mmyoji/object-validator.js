@@ -3,6 +3,7 @@ import type { Schema, ValidatorFunc, ValidationError } from "../lib-env";
 import { isObject } from "../helpers/is-object";
 import { booleanValidator } from "./boolean.validator";
 import { stringValidator } from "./string.validator";
+import { numberValidator } from "./number.validator";
 
 /**
  * init initializes validator function.
@@ -58,16 +59,24 @@ export function init<Args extends object>(schema: Schema): ValidatorFunc<Args> {
       const target = obj[key];
 
       const { type } = schemaInfo;
+      const args = {
+        key,
+        schemaInfo,
+        target,
+      };
       switch (type) {
         case "string": {
-          errors.push(...stringValidator.validate({ key, schemaInfo, target }));
+          errors.push(...stringValidator.validate(args));
+          break;
+        }
+
+        case "number": {
+          errors.push(...numberValidator.validate(args));
           break;
         }
 
         case "boolean": {
-          errors.push(
-            ...booleanValidator.validate({ key, schemaInfo, target })
-          );
+          errors.push(...booleanValidator.validate(args));
           break;
         }
 
