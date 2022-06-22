@@ -17,7 +17,6 @@
     "exactOptionalPropertyTypes": true,
     "outDir": "dist",
     "declaration": true,
-    "emitDeclarationOnly": true
   },
   "include": ["lib"]
 }

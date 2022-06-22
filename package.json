@@ -2,7 +2,10 @@
   "name": "@mmyoji/object-validator",
   "version": "0.0.1",
   "description": "Zero dependency, simple object validator library",
-  "keywords": ["validator", "validation"],
+  "keywords": [
+    "validator",
+    "validation"
+  ],
   "homepage": "https://github.com/mmyoji/object-validator.js#readme",
   "bugs": {
     "url": "https://github.com/mmyoji/object-validator.js/issues"
@@ -26,7 +29,7 @@
   },
   "types": "./dist/main.d.ts",
   "scripts": {
-    "build": "vite build && tsc",
+    "build": "vite build",
     "test": "vitest --run",
     "test:watch": "vitest"
   },
@@ -34,6 +37,7 @@
     "@types/node": "^16.11.41",
     "typescript": "^4.5.4",
     "vite": "^2.9.9",
+    "vite-plugin-dts": "^1.2.0",
     "vitest": "^0.15.2"
   }
 }
