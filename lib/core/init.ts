@@ -59,21 +59,24 @@ export function init<Args extends object>(schema: Schema): ValidatorFunc<Args> {
       const target = obj[key];
 
       const { type } = schemaInfo;
+      const args = {
+        key,
+        schemaInfo,
+        target,
+      };
       switch (type) {
         case "string": {
-          errors.push(...stringValidator.validate({ key, schemaInfo, target }));
+          errors.push(...stringValidator.validate(args));
           break;
         }
 
         case "number": {
-          errors.push(...numberValidator.validate({ key, schemaInfo, target }));
+          errors.push(...numberValidator.validate(args));
           break;
         }
 
         case "boolean": {
-          errors.push(
-            ...booleanValidator.validate({ key, schemaInfo, target })
-          );
+          errors.push(...booleanValidator.validate(args));
           break;
         }
 
