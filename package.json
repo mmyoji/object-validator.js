@@ -4,16 +4,17 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/object-validator.umd.js",
-  "module": "./dist/object-validator.es.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "exports": {
     ".": {
-      "import": "./dist/object-validator.es.js",
-      "require": "./dist/object-validator.umd.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     }
   },
+  "types": "./dist/main.d.ts",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build && tsc",
     "test": "vitest --run",
     "test:watch": "vitest"
   },

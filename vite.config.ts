@@ -6,7 +6,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, "lib/main.ts"),
       name: "object-validator",
-      fileName: (format) => `object-validator.${format}.js`,
+      fileName: (format) => `index.${format}.js`,
     },
   },
 });
