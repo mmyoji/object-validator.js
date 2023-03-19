@@ -10,30 +10,6 @@ import { numberValidator } from "./number.validator";
  *
  * @param schema {Schema}
  * @returns {ValidatorFunc}
- *
- * # Example
- *
- * ```ts
- * type ObjectType = {
- *   username: string,
- *   isAdmin?: boolean,
- * }
- *
- * const validate = init<ObjectType>({
- *   username: {
- *     type: "string",
- *     required: true,
- *     minLength: 3,
- *     maxLength: 100,
- *   },
- *   isAdmin: {
- *     type: "boolean",
- *   },
- * });
- *
- * const errors = validate({ username: "ab", isAdmin: true })
- * // [{ key: "username", message: "username is too short. It must be 3 at least." }]
- * ```
  */
 export function init<Args extends object>(schema: Schema): ValidatorFunc<Args> {
   return (obj: Args) => {
