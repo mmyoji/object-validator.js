@@ -1,6 +1,8 @@
 # object-validator
 
-This is a learn-to-code repo. Please do not use.
+This is a learn-to-code repo. Production use is not recommended.
+
+If you need a practical validation library, use [Yup](https://www.npmjs.com/package/yup) or [Zod](https://www.npmjs.com/package/zod) instead.
 
 Breaking changes are often added during v0.
 
