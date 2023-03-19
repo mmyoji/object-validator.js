@@ -1,5 +1,9 @@
 # object-validator
 
+This is a learn-to-code repo. Please do not use.
+
+Breaking changes are often added during v0.
+
 ## Installation
 
 ```
