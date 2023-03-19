@@ -1,7 +1,3 @@
-import { init } from "./core/init";
+import { init, initValidator } from "./core/init";
 
-export {
-  /** @deprecated use `initValidator` instead */
-  init,
-  init as initValidator,
-};
+export { init, initValidator };
