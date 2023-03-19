@@ -13,7 +13,7 @@ $ npm install @mmyoji/object-validator
 ## Usage
 
 ```ts
-import { init } from "@mmyoji/object-validator";
+import { initValidator } from "@mmyoji/object-validator";
 
 type TargetObject = {
   name: string;
@@ -21,7 +21,7 @@ type TargetObject = {
   isAdmin?: boolean;
 };
 
-const validate = init<TargetObject>({
+const validate = initValidator<TargetObject>({
   name: {
     type: "string",
     required: true,
