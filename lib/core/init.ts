@@ -11,7 +11,7 @@ import { numberValidator } from "./number.validator";
  * @param schema {Schema}
  * @returns {ValidatorFunc}
  */
-export function init<Args extends object>(schema: Schema): ValidatorFunc<Args> {
+function init<Args extends object>(schema: Schema): ValidatorFunc<Args> {
   return (obj: Args) => {
     if (!isObject(obj)) {
       throw new Error(`passed object is not expected object type`);
@@ -65,3 +65,18 @@ export function init<Args extends object>(schema: Schema): ValidatorFunc<Args> {
     return errors;
   };
 }
+
+export {
+  /**
+   * @deprecated use `initValidator` instead
+   * @todo Remove this API in v1
+   */
+  init,
+
+  /**
+   * initValidator initializes validator function.
+   * @param {Schema} schema
+   * @returns {ValidatorFunc}
+   */
+  init as initValidator,
+};
