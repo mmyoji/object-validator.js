@@ -8,7 +8,7 @@ import { numberValidator } from "./number.validator";
 /**
  * init initializes validator function.
  *
- * @param schema {Schema}
+ * @param {Schema} schema
  * @returns {ValidatorFunc}
  */
 function init<Args extends object>(schema: Schema): ValidatorFunc<Args> {
